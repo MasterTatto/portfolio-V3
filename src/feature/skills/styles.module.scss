@@ -1,0 +1,29 @@
+@import "src/styles/media-query";
+@import "src/styles/mixin";
+
+.portfolio {
+  @include standart_main_container
+}
+
+.active {
+  @include active_wrapper
+}
+
+.container {
+  border: .1px solid #fff;
+}
+
+.logo {
+  color: #08fdd8;
+  font-size: 42px;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+
+.box {
+  border: .1px solid;
+  height: 100%;
+}
+
+//

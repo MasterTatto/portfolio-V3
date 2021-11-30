@@ -1,0 +1,30 @@
+@import "src/styles/media-query";
+.App {
+  overflow: hidden;
+  background: #1d1d1d;
+  position: relative;
+  z-index: 100;
+}
+
+.showMenu {
+  position: absolute;
+  color: #08fdd8;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 1.5px solid #08fdd8;
+  writing-mode: tb-rl;
+  top: calc(50% - (140px / 2));
+  letter-spacing: 5px;
+  padding: 20px 10px;
+  font-weight: 600;
+  border-radius: 0 10px 10px 0;
+  border-left: none;
+
+  @include media-breakpoint-down(xxxs) {
+    top: calc(50% - (220px / 2));
+  }
+}
+
+.hidden {
+  display: none;
+}

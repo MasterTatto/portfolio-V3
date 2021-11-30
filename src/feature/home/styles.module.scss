@@ -1,0 +1,166 @@
+@import "src/styles/media-query";
+@import "src/styles/mixin";
+
+.home {
+  @include standart_main_container;
+}
+
+.active {
+  @include active_wrapper
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+
+  @include media-breakpoint-down(xl) {
+    flex-direction: column-reverse;
+  }
+}
+
+.avatar {
+  flex: .5;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+}
+
+.avatar img {
+  max-height: 450px;
+  height: 100%;
+  box-shadow: 30px 20px 10px #333;
+  position: relative;
+  z-index: 10;
+
+  @include media-breakpoint-down(xl) {
+    max-height: 300px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    max-height: 250px;
+  }
+}
+
+.info {
+  flex: .5;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  //border: .1px solid #fff;
+
+  @include media-breakpoint-down(xl) {
+    //padding-left: 50px;
+  }
+  @include media-breakpoint-down(xs) {
+    width: 96vw;
+    //padding: 10px;
+  }
+}
+
+.logo {
+  color: #08fdd8;
+  font-size: 42px;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+
+.text {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  max-width: 90%;
+  margin-bottom: 2.5rem;
+
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 1.5rem;
+  }
+  @include media-breakpoint-down(xs) {
+    max-width: 100%;
+
+    &:nth-child(3) {
+      margin-left: 40px;
+    }
+  }
+
+  @include media-breakpoint-down(xxxs) {
+    font-size: 1.25rem;
+    max-width: 90%;
+  }
+}
+
+.runText {
+  color: #08fdd8;
+  font-weight: 900;
+  font-size: 26px;
+  margin-left: 10px;
+  letter-spacing: 4px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.linkBox {
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(md) {
+    max-width: 450px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    max-width: 380px;
+  }
+  @include media-breakpoint-down(xxxs) {
+    flex-direction: column;
+    max-width: 280px
+  }
+}
+
+.linkInfo {
+  color: #08fdd8;
+  font-size: 14px;
+  letter-spacing: 4px;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  margin-top: 20px;
+  padding: 10px 30px;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  border: 1px solid #08fdd8;
+  cursor: pointer;
+  transition: .4s all;
+
+  &:hover {
+    padding: 10px 35px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 10px 20px;
+
+    &:hover {
+      padding: 10px 25px;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 7px 10px;
+  }
+
+
+}

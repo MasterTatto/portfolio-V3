@@ -1,0 +1,10 @@
+@import "src/styles/media-query";
+@import "src/styles/mixin";
+
+.portfolio {
+  @include standart_main_container
+}
+
+.active {
+  @include active_wrapper
+}

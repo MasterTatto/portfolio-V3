@@ -1,0 +1,192 @@
+@import "src/styles/media-query";
+
+.header {
+  //background-color: #0d0606;
+  //background-color: #003333;
+  //background-color: #000033;
+  //background-color: #009965;
+  background-color: #181818;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 17vw;
+  height: 100vh;
+  transition: all .8s;
+  display: flex;
+  align-items: center;
+
+  //opacity: 0.3;
+  @media only screen and (min-width: 1440px) and (max-width: 1800px) {
+    width: 20vw;
+  }
+  @include media-breakpoint-down(xl) {
+    width: 28vw;
+  }
+
+  @include media-breakpoint-down(xs) {
+    left: -100vw;
+  }
+}
+
+.showMenu {
+  left: 0;
+  width: 100vw;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 14px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 43vh;
+  justify-content: space-between;
+  //border: .1px solid #fff;
+}
+
+.info h1 {
+  color: #cacaca;
+  font-size: 34px;
+  max-width: 100%;
+  letter-spacing: .1rem;
+  font-weight: 900;
+  text-align: center;
+
+  @include media-breakpoint-down(md) {
+    font-size: 30px;
+  }
+}
+
+.images {
+  height: 150px;
+}
+
+.images img {
+  height: inherit;
+  border-radius: 50%;
+
+}
+
+.intro {
+  color: #cacaca;
+  text-align: center;
+  //max-width: 260px;
+  font-size: 18px;
+  letter-spacing: .6px;
+  font-weight: 500;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 40px;
+  width: 100%;
+
+  @include media-breakpoint-down(md) {
+    font-size: 18px;
+  }
+}
+
+.icons {
+  padding: 10px 0 30px 0;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.iconsSvg {
+  fill: #3300CC;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  transition: .3s all;
+  background-color: white;
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: .7px;
+  justify-content: space-around;
+  color: #909096;
+  height: 40vh;
+  margin: 0 auto;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
+  }
+}
+
+.componentIcon {
+  height: 30px;
+  fill: #909096;
+  margin-right: 20px;
+}
+
+.li {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.active {
+  //color: #CC9966;
+  color: #08fdd8;
+  margin-left: 30px;
+  transition: .5s all;
+
+  @include media-breakpoint-down(md) {
+    margin-left: 15px;
+  }
+
+  .componentIcon {
+    fill: #08fdd8;
+  }
+
+  &::after {
+    //content: url('../../assets/icons/red-vector.svg');
+    content: '';
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #08fdd8;
+    position: absolute;
+    top: 12px;
+    right: -5px;
+
+    @include media-breakpoint-down(md) {
+      right: -20px;
+    }
+  }
+}
+
+.button {
+  padding: 15px 30px;
+  margin-top: 40px;
+  color: #fff;
+  background-color: #444;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  letter-spacing: .5px;
+  cursor: pointer;
+  transition: .4s all ease-out;
+
+  &:hover {
+    box-shadow: 10px 8px 10px #333;
+    padding: 15px 33px;
+  }
+}
+
+
