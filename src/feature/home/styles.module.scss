@@ -14,7 +14,8 @@
   align-items: center;
 
   @include media-breakpoint-down(xs) {
-    width: 100vw;
+    //width: 100vw;
+    //margin-left: 10px;
   }
 }
 
@@ -27,8 +28,9 @@
   }
 
   @include media-breakpoint-down(xs) {
-    width: 0;
-    margin-left: 4%;
+    margin-left: -13%;
+
+
   }
 }
 
@@ -100,10 +102,11 @@
     margin-bottom: 1.5rem;
   }
   @include media-breakpoint-down(xs) {
-    max-width: 100%;
+    max-width: 95%;
 
     &:nth-child(3) {
       margin-left: 40px;
+      max-width: 85%;
     }
   }
 
