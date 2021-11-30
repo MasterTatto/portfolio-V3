@@ -12,6 +12,10 @@
 .container {
   display: flex;
   align-items: center;
+
+  @include media-breakpoint-down(xs) {
+    width: 100vw;
+  }
 }
 
 .content {
@@ -20,6 +24,11 @@
 
   @include media-breakpoint-down(xl) {
     flex-direction: column-reverse;
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: 0;
+    margin-left: 4%;
   }
 }
 

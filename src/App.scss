@@ -1,9 +1,11 @@
 @import "src/styles/media-query";
+
 .App {
-  overflow: hidden;
-  background: #1d1d1d;
+  //overflow: hidden;
+  overflow-x: hidden;
+  //background: #1d1d1d;
   position: relative;
-  z-index: 100;
+  z-index: 9999999;
 }
 
 .showMenu {
@@ -27,4 +29,28 @@
 
 .hidden {
   display: none;
+}
+
+.ant-progress {
+  position: relative;
+  display: inline-block;
+}
+
+.ant-progress-text {
+  position: absolute;
+  top: 36%;
+  left: 29%;
+  width: 100%;
+  font-size: 34px;
+  color: #cacaca;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 28px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 24px;
+    left: 25%;
+    top: 34%;
+  }
 }

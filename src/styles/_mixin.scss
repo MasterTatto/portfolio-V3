@@ -1,5 +1,6 @@
 @mixin standart_main_container() {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   background: #1d1d1d;
   display: flex;
   min-width: 83vw;
@@ -18,6 +19,9 @@
     max-width: 72vw;
   }
 
+  @include media-breakpoint-down(xs) {
+    max-width: 100vw;
+  }
 }
 
 @mixin active_wrapper() {
@@ -32,9 +36,10 @@
   }
 
   @include media-breakpoint-down(xs) {
-    margin-left: 0%;
+    margin-left: 0;
   }
 }
+
 //"homepage": "https://mastertatto.github.io/portfolio-v3/",
 //"predeploy": "npm run build",
 //"deploy": "gh-pages -d build",

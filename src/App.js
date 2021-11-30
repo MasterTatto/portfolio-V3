@@ -9,6 +9,7 @@ import Contact from "./feature/contact";
 import {useState} from "react";
 import {useWindowSize} from "./helpers/windowsSize";
 import {combineCss} from "./helpers/combineCss";
+import Bubble from "./helpers/bubble";
 
 
 function App() {
@@ -20,9 +21,11 @@ function App() {
 
     return (
         <div className='App' onDoubleClick={() => setSizeBubble(sizeBubble + 1)}>
-            <Header currentUrl={currentUrl} setCurrentUrl={setCurrentUrl} width={width} showMenu={showMenu} setShowMenu={setShowMenu}/>
+            <Header currentUrl={currentUrl} setCurrentUrl={setCurrentUrl} width={width} showMenu={showMenu}
+                    setShowMenu={setShowMenu}/>
 
-            {width <= 576 && <span className={combineCss('showMenu',showMenu && 'hidden')} onClick={() => setShowMenu(true)}>menu</span>}
+            {width <= 576 && <span className={combineCss('showMenu', showMenu && 'hidden')}
+                                   onClick={() => setShowMenu(true)}>menu</span>}
 
             <Routes>
                 <Route exact path={'*'} element={<Home currentUrl={currentUrl} sizeBubble={sizeBubble}/>}/>
@@ -31,6 +34,7 @@ function App() {
                 <Route path={'/skills'} element={<Skills currentUrl={currentUrl}/>}/>
                 <Route path={'/contact'} element={<Contact currentUrl={currentUrl}/>}/>
             </Routes>
+
 
         </div>
     )
