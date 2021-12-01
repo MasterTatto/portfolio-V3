@@ -8,10 +8,9 @@ import {NavLink} from "react-router-dom";
 import {randomNumber} from "../../helpers/randomNumber";
 import {combineCss} from "../../helpers/combineCss";
 import Bubble from "../../helpers/bubble";
+import {useWindowSize} from "../../helpers/windowsSize";
 
 const Home = ({currentUrl, sizeBubble}) => {
-
-
     useEffect(() => {
         const myElement = document.querySelector('#runText')
         init(myElement, {
@@ -21,31 +20,28 @@ const Home = ({currentUrl, sizeBubble}) => {
         })
     }, [])
 
-    // useEffect(() => {
-    //
-    //
-    //      window.addEventListener('mousemove', parallax)
-    //
-    //
-    //     function parallax(e) {
-    //         let w = window.innerWidth / 2;
-    //         let h = window.innerHeight / 2;
-    //         setX(e.clientX)
-    //         setY(e.clientY);
-    //         // // let depth = `${50 - (mouseX - w) * 0.01 / 10}% ${50 - (mouseY - h) * 0.01 / 10}%}`
-    //         // let depth = `${50 - (mouseY - h) * 0.01 / 10}%}`
-    //         // setMove(depth)
-    //     }
-    //
-    // })
+    const [move, setMove] = useState(null)
+
+    useEffect(() => {
+        window.addEventListener('mousemove', parallax)
+
+        function parallax(e) {
+            let w = window.innerWidth / 2;
+            let h = window.innerHeight / 2;
+            let mouseX = e.clientX
+            let mouseY = e.clientY
+
+            let depth = `${(0 - (mouseX - w) * 0.008).toFixed(1)}%, ${(0 - (mouseY - h) * 0.008).toFixed(1)}%`
+            setMove(depth)
+        }
+    }, [])
+
     let [left, setLeft] = useState(false);
     useEffect(() => {
         if (currentUrl === '/') {
-            setTimeout(() => {
-                setLeft(true)
-            }, 0)
+            setLeft(true)
         }
-    })
+    }, [currentUrl])
 
 
     return (
@@ -76,11 +72,13 @@ const Home = ({currentUrl, sizeBubble}) => {
                         <img
                             src={profile}
                             alt="myself"
+                            className={'img'}
+                            style={{transform: `translate(${move})`}}
                         />
                     </div>
                 </div>
             </Container>
-            <Bubble size={sizeBubble}/>
+            {/*{width > 550 && <Bubble size={25}/>}*/}
         </div>
     )
 };

@@ -29,12 +29,13 @@ const Header = ({setCurrentUrl, currentUrl, width, showMenu, setShowMenu}) => {
                 </div>
                 <ul className={styles.ul}>
                     {dataHeader(styles.componentIcon).map((el, i) => {
-                        return <NavLink className={combineCss(el.link === currentUrl && styles.active, styles.li)}
-                                        to={el.link}
-                                        onClick={() => {
-                                            setCurrentUrl(el.link)
-                                            setShowMenu(false)
-                                        }}>{el.component}{el.title}</NavLink>
+                        return <NavLink
+                            className={combineCss(el.link === currentUrl && styles.active, styles.li)}
+                            to={el.link}
+                            onClick={() => {
+                                setCurrentUrl(el.link)
+                                setShowMenu(false)
+                            }}>{el.component}{el.title}</NavLink>
                     })}
 
                 </ul>

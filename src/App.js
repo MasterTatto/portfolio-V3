@@ -10,33 +10,42 @@ import {useState} from "react";
 import {useWindowSize} from "./helpers/windowsSize";
 import {combineCss} from "./helpers/combineCss";
 import Bubble from "./helpers/bubble";
-
+import Cursor from "react-special-cursor";
+import AnimatedCursor from "react-animated-cursor";
 
 function App() {
     const [currentUrl, setCurrentUrl] = useState('/')
-    const [sizeBubble, setSizeBubble] = useState(35)
     const [showMenu, setShowMenu] = useState(false)
     const {width} = useWindowSize()
-    console.log(width)
+    console.log(window)
 
     return (
-        <div className='App' onDoubleClick={() => setSizeBubble(sizeBubble + 1)}>
+        <>
+            <AnimatedCursor
+                innerSize={8}
+                outerSize={40}
+                color='8, 253, 216'
+                outerAlpha={.3}
+                innerScale={1}
+                outerScale={2.1}
+            />
             <Header currentUrl={currentUrl} setCurrentUrl={setCurrentUrl} width={width} showMenu={showMenu}
                     setShowMenu={setShowMenu}/>
 
-            {width <= 576 && <span className={combineCss('showMenu', showMenu && 'hidden')}
+            {width <= 768 && <span className={combineCss('showMenu', showMenu && 'hidden')}
                                    onClick={() => setShowMenu(true)}>menu</span>}
+            <div className='pages'>
+                <Routes>
+                    <Route exact path={'*'} element={<Home currentUrl={currentUrl}/>}/>
+                    <Route path={'/portfolio'} element={<Portfolio currentUrl={currentUrl}/>}/>
+                    <Route path={'/resume'} element={<Resume currentUrl={currentUrl}/>}/>
+                    <Route path={'/skills'} element={<Skills currentUrl={currentUrl}/>}/>
+                    <Route path={'/contact'} element={<Contact currentUrl={currentUrl}/>}/>
+                </Routes>
+                {width > 550 && <Bubble size={25}/>}
+            </div>
 
-            <Routes>
-                <Route exact path={'*'} element={<Home currentUrl={currentUrl} sizeBubble={sizeBubble}/>}/>
-                <Route path={'/portfolio'} element={<Portfolio currentUrl={currentUrl}/>}/>
-                <Route path={'/resume'} element={<Resume currentUrl={currentUrl}/>}/>
-                <Route path={'/skills'} element={<Skills currentUrl={currentUrl}/>}/>
-                <Route path={'/contact'} element={<Contact currentUrl={currentUrl}/>}/>
-            </Routes>
-
-
-        </div>
+        </>
     )
 };
 

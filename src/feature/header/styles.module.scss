@@ -9,20 +9,23 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 17vw;
+  width: 20vw;
   height: 100vh;
   transition: all .8s;
   display: flex;
   align-items: center;
+  z-index: 5;
 
   //opacity: 0.3;
-  @media only screen and (min-width: 1440px) and (max-width: 1800px) {
-    width: 20vw;
+  //@media only screen and (min-width: 1440px) and (max-width: 1800px) {
+  //  width: 20vw;
+  //}
+  //@include media-breakpoint-down(xl) {
+  //  width: 28vw;
+  //}
+  @include media-breakpoint-down(md) {
+    left: -100vw;
   }
-  @include media-breakpoint-down(xl) {
-    width: 28vw;
-  }
-
   @include media-breakpoint-down(xs) {
     left: -100vw;
   }
@@ -65,7 +68,15 @@
 }
 
 .images {
-  height: 150px;
+  height: 220px;
+
+  @media only screen and (min-width: 1440px) and (max-width: 1800px) {
+    height: 150px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    height: 150px;
+  }
 }
 
 .images img {
@@ -121,6 +132,10 @@
   width: 100%;
   border-bottom: 1px solid #fff;
 
+  @include media-breakpoint-down(lg) {
+    font-size: 20px;
+  }
+
   @include media-breakpoint-down(md) {
     font-size: 20px;
   }
@@ -138,6 +153,13 @@
   display: flex;
   align-items: center;
   width: 80%;
+  @include media-breakpoint-down(xl) {
+    width: 95%;
+  }
+  @include media-breakpoint-down(lg) {
+
+    width: 85%;
+  }
 }
 
 .active {
@@ -145,7 +167,14 @@
   color: #08fdd8;
   margin-left: 30px;
   transition: .5s all;
+  border: 1px solid #08fdd8;
+  height: 50px;
+  padding: 0 10px;
+  border-radius: 20px;
 
+  @include media-breakpoint-down(xl) {
+    margin-left: 5px;
+  }
   @include media-breakpoint-down(md) {
     margin-left: 15px;
   }
@@ -162,11 +191,18 @@
     border-radius: 50%;
     background-color: #08fdd8;
     position: absolute;
-    top: 12px;
-    right: -5px;
+    top: 20px;
+    right: 15px;
 
+    @include media-breakpoint-down(lg) {
+      //display: none;
+      visibility: hidden;
+    }
     @include media-breakpoint-down(md) {
-      right: -20px;
+      visibility: visible;
+    }
+    @include media-breakpoint-down(xs) {
+      visibility: visible;
     }
   }
 }

@@ -1,15 +1,8 @@
 @import "src/styles/media-query";
 
-.App {
-  //overflow: hidden;
-  overflow-x: hidden;
-  //background: #1d1d1d;
-  position: relative;
-  z-index: 9999999;
-}
 
 .showMenu {
-  position: absolute;
+  position: fixed;
   color: #08fdd8;
   font-size: 20px;
   text-transform: uppercase;
@@ -21,6 +14,7 @@
   font-weight: 600;
   border-radius: 0 10px 10px 0;
   border-left: none;
+  z-index: 5;
 
   @include media-breakpoint-down(xxxs) {
     top: calc(50% - (220px / 2));
@@ -52,5 +46,17 @@
     font-size: 24px;
     left: 25%;
     top: 34%;
+  }
+}
+
+.pages {
+  background: #1d1d1d;
+  position: relative;
+  width: 80vw;
+  margin-left: 20vw;
+
+  @include media-breakpoint-down(xs) {
+    width: 100vw;
+    margin-left: 0;
   }
 }
