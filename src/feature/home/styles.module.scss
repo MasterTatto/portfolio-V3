@@ -1,6 +1,12 @@
 @import "src/styles/media-query";
 @import "src/styles/mixin";
 
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+
 .home {
   @include standart_main_container;
 }
@@ -51,7 +57,7 @@
   height: 100%;
   box-shadow: 30px 20px 10px #333;
   position: relative;
-  z-index: 100;
+  z-index: 3;
   @include media-breakpoint-down(xxl) {
     max-height: 400px;
   }
@@ -146,21 +152,32 @@
 
 .linkInfo {
   color: #08fdd8;
-  font-size: 14px;
-  letter-spacing: 4px;
-  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: .15rem;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
   text-decoration: none;
   margin-top: 20px;
-  padding: 10px 30px;
+  padding: 8px 20px;
   line-height: 50px;
   display: block;
   text-align: center;
   border: 1px solid #08fdd8;
   cursor: pointer;
-  transition: .4s all;
+  //transition: .4s all;
+
+  //
+  //8, 253,216,50%
+  background-image: linear-gradient(45deg, transparent 50%, rgba(8, 253, 216, 70%) 50%);
+  background-position: 25%;
+  background-size: 400%;
+  -webkit-transition: background 700ms ease-in-out, color 700ms ease-in-out;
+  transition: background 700ms ease-in-out, color 700ms ease-in-out;
 
   &:hover {
-    padding: 10px 35px;
+    //padding: 10px 35px;
+    color: #1d1d1d;
+    background-position: 100%;
   }
 
   @include media-breakpoint-down(md) {
@@ -173,6 +190,6 @@
   @include media-breakpoint-down(xs) {
     padding: 7px 10px;
   }
-
-
 }
+
+//

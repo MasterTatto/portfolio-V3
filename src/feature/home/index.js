@@ -64,7 +64,8 @@ const Home = ({currentUrl, sizeBubble}) => {
                         <div className={styles.linkBox}>
                             <NavLink className={styles.linkInfo} to={'/portfolio'}>View portfolio</NavLink>
                             <a className={styles.linkInfo} target={'_blank'} href={'#'}>Download
-                                resume</a>
+                                resume
+                            </a>
                         </div>
                     </div>
 
@@ -78,7 +79,8 @@ const Home = ({currentUrl, sizeBubble}) => {
                     </div>
                 </div>
             </Container>
-            {/*{width > 550 && <Bubble size={25}/>}*/}
+            {/*{width > 550 && <Bubble size={25}/>}*/
+            }
         </div>
     )
 };
