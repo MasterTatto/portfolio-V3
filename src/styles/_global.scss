@@ -10,3 +10,38 @@ a, li {
   list-style: none;
   color: #cacaca
 }
+
+//.MuiTextField-root input {
+//  outline: none;
+//  border: none;
+//  border-radius: 5px;
+//  background: #2b2b2b;
+//  //height: 80px;
+//  //height: 56px;
+//  font-size: 21px;
+//  position: relative;
+//  color: #08fdd8;
+//  padding: 15px;
+//  transition: 0.5s all linear;
+//  //margin-top: 30px;
+//  line-height: 1.7rem;
+//  border-color: #fff;
+//
+//  &:focus {
+//    color: #08fdd8;
+//    border-color: #fff;
+//  }
+//
+//  .css-1kty9di-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+//    color: #08fdd8;
+//  }
+//
+//}
+
+.MuiTextField-root label {
+  color: #08fdd8;
+
+  &:focus {
+    color: #08fdd8;
+  }
+}
