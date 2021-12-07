@@ -30,7 +30,7 @@ function App() {
 			)}
 			<div className='pages'>
 				<Routes>
-					<Route exact path={'*'} element={<Home currentUrl={currentUrl} />} />
+					<Route path={'/'} element={<Home currentUrl={currentUrl} />} />
 					<Route path={'/portfolio'} element={<Portfolio currentUrl={currentUrl} />} />
 					<Route path={'/resume'} element={<Resume currentUrl={currentUrl} />} />
 					<Route path={'/skills'} element={<Skills currentUrl={currentUrl} />} />
