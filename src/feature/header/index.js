@@ -6,7 +6,7 @@ import {combineCss} from "../../helpers/combineCss";
 import myself4 from '../../assets/img/mev4.png'
 
 
-const Header = ({setCurrentUrl, currentUrl, width, showMenu, setShowMenu}) => {
+const Header = ({setCurrentUrl, currentUrl, width, showMenu, setShowMenu, setBackMode, backMode}) => {
 
 
     return (
@@ -40,7 +40,10 @@ const Header = ({setCurrentUrl, currentUrl, width, showMenu, setShowMenu}) => {
 
                 </ul>
 
-                <button className={styles.button}>View resume</button>
+                <button className={styles.button}
+                        onClick={() => setBackMode(backMode === 'particles' ? 'bubbles' : 'particles')}>Change
+                    background
+                </button>
 
 
             </div>

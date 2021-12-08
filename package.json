@@ -23,6 +23,8 @@
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "react-special-cursor": "^1.2.0",
+    "react-tsparticles": "^1.37.5",
+    "react-yandex-maps": "^4.6.0",
     "sass": "^1.43.4",
     "styled-components": "^5.3.3",
     "web-vitals": "^1.0.1"

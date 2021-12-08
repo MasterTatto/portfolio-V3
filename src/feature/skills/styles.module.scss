@@ -71,6 +71,8 @@
   padding: 30px 20px;
   height: fit-content;
   border-bottom: 1px solid #cacaca;
+  position: relative;
+  z-index: 4;
 
   &:nth-child(odd) {
     flex-direction: row-reverse;
