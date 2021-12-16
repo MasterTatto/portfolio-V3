@@ -38,6 +38,7 @@ const FormContact = () => {
             })
     }
 
+    console.log(formik)
     return (
         <>
             <div className={combineCss(styles.alert, sucsses && styles.active)}>
@@ -58,8 +59,9 @@ const FormContact = () => {
                                     className={combineCss(styles.input)}
                                     type='text'
                                     label='Name'
-                                    error={!!formik.errors.name && formik.touched.name}
+                                    error={formik.errors.name && formik.touched.name}
                                     helperText={formik.touched.name ? formik.errors.name : null}
+
                                     {...formik.getFieldProps('name')}
                                     InputLabelProps={{className: combineCss(styles.test__label, formik.errors.name && styles.test__error)}}
                                     InputProps={{className: styles.test__input}}
@@ -77,6 +79,7 @@ const FormContact = () => {
                                     {...formik.getFieldProps('email')}
                                     InputLabelProps={{className: combineCss(styles.test__label, formik.errors.email && styles.test__error)}}
                                     InputProps={{className: styles.test__input}}
+                                    onChange={formik.validateOnBlur}
                                 />
                                 <span className={formik.errors.email && styles.test__error}>*</span>
                             </div>

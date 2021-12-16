@@ -1,17 +1,18 @@
 import './App.scss';
-import Header from './feature/header';
-import Home from './feature/home';
-import Portfolio from './feature/portfolio';
+import Header from './components/c0-header';
+import Home from './components/c1-home';
+import Portfolio from './components/c2-portfolio';
 import {Route, Routes} from 'react-router-dom';
-import Resume from './feature/resume';
-import Skills from './feature/skills';
-import Contact from './feature/contact';
+import Skills from './components/c3-skills';
+import Contact from './components/c4-contact';
 import {useState} from 'react';
 import {useWindowSize} from './helpers/windowsSize';
 import {combineCss} from './helpers/combineCss';
 import Bubble from './helpers/bubble';
 import AnimatedCursor from 'react-animated-cursor';
 import Particles from "react-tsparticles";
+import {items} from "./components/c2-portfolio/data";
+import Item from "./components/c2-portfolio/item";
 
 function App() {
     const [currentUrl, setCurrentUrl] = useState('/');
@@ -34,8 +35,8 @@ function App() {
             <div className='pages'>
                 <Routes>
                     <Route path={'/'} element={<Home currentUrl={currentUrl}/>}/>
-                    <Route path={'/portfolio'} element={<Portfolio currentUrl={currentUrl}/>}/>
-                    <Route path={'/resume'} element={<Resume currentUrl={currentUrl}/>}/>
+                    <Route path={'/portfolio'} element={<Portfolio currentUrl={currentUrl} data={items}/>}/>
+                    <Route path={'/portfolio/:title'} element={<Item currentUrl={currentUrl} data={items}/>}/>
                     <Route path={'/skills'} element={<Skills currentUrl={currentUrl}/>}/>
                     <Route path={'/contact'} element={<Contact currentUrl={currentUrl}/>}/>
                 </Routes>

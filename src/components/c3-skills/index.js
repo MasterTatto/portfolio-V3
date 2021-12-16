@@ -4,7 +4,7 @@ import Container from "../../helpers/container";
 import {combineCss} from "../../helpers/combineCss";
 import {items} from "./data";
 import {useWindowSize} from "../../helpers/windowsSize";
-import ProgressBar from "../Progress";
+import ProgressBar from "./Progress";
 import TimeLine from "./timeline";
 
 const Skills = ({currentUrl}) => {
@@ -25,7 +25,6 @@ const Skills = ({currentUrl}) => {
             <Container className={styles.container}>
                 <h1 className={styles.logo}>Skills</h1>
                 <div className={styles.box}>
-                    {/*<div className={styles.line}></div>*/}
                     {items.map((el) => {
                         return <div className={styles.item}>
                             <ProgressBar title={el.title} percent={el.percent} widthProgress={widthProgress}/>

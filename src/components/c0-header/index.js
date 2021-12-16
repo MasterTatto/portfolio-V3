@@ -21,11 +21,7 @@ const Header = ({setCurrentUrl, currentUrl, width, showMenu, setShowMenu, setBac
                     </div>
                     <p className={styles.intro}>Hi, my name Alexander and i`m a front-end developer. Welcome to my
                         personal website! </p>
-                    {/*<div className={styles.icons}>*/}
-                    {/*    {iconsHeader(styles.iconsSvg).map(el => {*/}
-                    {/*        return <a target='_blank' href={el.link}>{el.title}</a>*/}
-                    {/*    })}*/}
-                    {/*</div>*/}
+
                 </div>
                 <ul className={styles.ul}>
                     {dataHeader(styles.componentIcon).map((el, i) => {
@@ -44,7 +40,6 @@ const Header = ({setCurrentUrl, currentUrl, width, showMenu, setShowMenu, setBac
                         onClick={() => setBackMode(backMode === 'particles' ? 'bubbles' : 'particles')}>Change
                     background
                 </button>
-
 
             </div>
         </div>
