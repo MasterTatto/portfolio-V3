@@ -1,79 +1,86 @@
-@import "src/styles/media-query";
-
+@import 'src/styles/media-query';
 
 .showMenu {
-  position: fixed;
-  color: #08fdd8;
-  font-size: 20px;
-  text-transform: uppercase;
-  border: 1.5px solid #08fdd8;
-  writing-mode: tb-rl;
-  top: calc(50% - (140px / 2));
-  letter-spacing: 5px;
-  padding: 20px 10px;
-  font-weight: 600;
-  border-radius: 0 10px 10px 0;
-  border-left: none;
-  z-index: 5;
+	position: fixed;
+	color: #08fdd8;
+	font-size: 20px;
+	text-transform: uppercase;
+	border: 1.5px solid #08fdd8;
+	writing-mode: tb-rl;
+	top: calc(50% - (140px / 2));
+	letter-spacing: 5px;
+	padding: 20px 10px;
+	font-weight: 600;
+	border-radius: 0 10px 10px 0;
+	border-left: none;
+	z-index: 5;
 
-  @include media-breakpoint-down(xxxs) {
-    top: calc(50% - (220px / 2));
-  }
+	@include media-breakpoint-down(xxxs) {
+		top: calc(50% - (220px / 2));
+	}
 }
 
 .hidden {
-  display: none;
+	display: none;
 }
 
 .ant-progress {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 .ant-progress-text {
-  position: absolute;
-  top: 36%;
-  left: 29%;
-  width: 100%;
-  font-size: 34px;
-  color: #cacaca;
+	position: absolute;
+	top: 36%;
+	left: 29%;
+	width: 100%;
+	font-size: 34px;
+	color: #cacaca;
 
-  @include media-breakpoint-down(lg) {
-    font-size: 28px;
-  }
+	@include media-breakpoint-down(lg) {
+		font-size: 28px;
+	}
 
-  @include media-breakpoint-down(xs) {
-    font-size: 24px;
-    left: 25%;
-    top: 34%;
-  }
+	@include media-breakpoint-down(xs) {
+		font-size: 24px;
+		left: 25%;
+		top: 34%;
+	}
 }
 
 .pages {
-  background: #1d1d1d;
-  position: relative;
-  width: 80vw;
-  margin-left: 20vw;
+	background: #1d1d1d;
+	position: relative;
+	width: 80vw;
+	margin-left: 20vw;
 
-  @include media-breakpoint-down(xs) {
-    width: 100vw;
-    margin-left: 0;
-  }
+	@include media-breakpoint-down(xs) {
+		width: 100vw;
+		margin-left: 0;
+	}
 }
 
 #map {
-  width: 100%;
+	width: 100%;
 }
 
 //.ymaps-2-1-79-events-pane,
 .ymaps-2-1-79-user-selection-none {
-  filter: invert(100%);
-  -ms-filter: invert(100%);
-  -webkit-filter: invert(100%);
-  -moz-filter: invert(100%);
-  -o-filter: invert(100%);
+	filter: invert(100%);
+	-ms-filter: invert(100%);
+	-webkit-filter: invert(100%);
+	-moz-filter: invert(100%);
+	-o-filter: invert(100%);
+}
+.ymaps-2-1-79-map,
+.ymaps-2-1-79-i-ua_js_yes,
+.ymaps-2-1-79-map-bg,
+.ymaps-2-1-79-islets_map-lang-ru {
+	filter: invert(100%);
+}
+
+.ymaps-2-1-79-inner-panes {
+	filter: invert(100%);
 }
 
 //
-
-
