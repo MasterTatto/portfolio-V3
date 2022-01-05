@@ -3,17 +3,19 @@
   height: 100%;
   background: #1d1d1d;
   display: flex;
-  margin-left: -117vw;
+  margin-left: 0;
   position: relative;
   transition: 1s all;
   color: #fff;
-}
+  animation: move linear 1s;
 
-@mixin active_wrapper() {
-  margin-left: 0;
-
-  @include media-breakpoint-down(xs) {
-    margin-left: 0;
+  @keyframes move {
+    0% {
+      margin-left: -157vw;
+    }
+    100% {
+      margin-left: 0;
+    }
   }
 }
 

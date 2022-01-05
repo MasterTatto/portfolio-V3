@@ -4,17 +4,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './styles/_global.scss';
 import './styles/_media-query.scss';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import {HashRouter} from 'react-router-dom';
 
 ReactDOM.render(
-	<React.StrictMode>
-		{/* <BrowserRouter> */}
-		<HashRouter>
-			<App />
-		</HashRouter>
-		{/* </BrowserRouter> */}
-	</React.StrictMode>,
-	document.getElementById('root')
+    <React.StrictMode>
+        <HashRouter>
+            <App/>
+        </HashRouter>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

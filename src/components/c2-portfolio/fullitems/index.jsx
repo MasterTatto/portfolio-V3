@@ -2,13 +2,13 @@ import React from "react";
 import styles from './styles.module.scss'
 import {NavLink} from "react-router-dom";
 
-const Fullitems = ({data}) => {
+const FullItems = ({data}) => {
 
     return (
         <div className={styles.box}>
 
             {data.map((el) => {
-                return <div className={styles.item}>
+                return <div className={styles.item} key={el.title}>
                     <div className={styles.boxImg} style={{backgroundImage: `url(${el.img})`}}/>
 
                     <div className={styles.boxInfo}>
@@ -23,4 +23,4 @@ const Fullitems = ({data}) => {
     );
 };
 
-export default Fullitems;
+export default FullItems;

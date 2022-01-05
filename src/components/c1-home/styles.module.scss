@@ -11,10 +11,6 @@
   @include standart_main_container;
 }
 
-.active {
-  @include active_wrapper;
-}
-
 .container {
   display: flex;
   align-items: center;

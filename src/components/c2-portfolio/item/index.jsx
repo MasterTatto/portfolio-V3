@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss'
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 
 const Item = ({data}) => {
     const {title} = useParams()
@@ -9,7 +9,7 @@ const Item = ({data}) => {
     return (
         <div className={styles.box}>
             {data.filter((f) => f.title === title).map((el) => {
-                return <div className={styles.aboutWork}>
+                return <div className={styles.aboutWork} key={el.title}>
 
                     <div className={styles.wrapper}>
 
@@ -28,9 +28,9 @@ const Item = ({data}) => {
                             </div>
 
                             <div className={styles.btn}>
-                                <a className={styles.linkInfo} target={'_blank'}>View
+                                <a rel="noreferrer" href={'/'} className={styles.linkInfo} target={'_blank'}>View
                                     code</a>
-                                <a className={styles.linkInfo} target={'_blank'}>View
+                                <a rel="noreferrer" href={'/'} className={styles.linkInfo} target={'_blank'}>View
                                     demo</a>
                             </div>
 

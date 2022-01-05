@@ -5,11 +5,12 @@ import {TextField} from "@mui/material";
 import {combineCss} from "../../../helpers/combineCss";
 import {useFormik} from "formik";
 import {validate} from "../../../helpers/validate";
-import emailjs, {init} from "emailjs-com";
+// import emailjs, {init} from "emailjs-com";
 import {ReactComponent as Sucsses} from "../../../assets/icons/sucses.svg";
+import axios from "axios";
 
 const FormContact = () => {
-    init('user_o9lBAZW5hXTb1BQ0r6faI');
+    // init('user_o9lBAZW5hXTb1BQ0r6faI');
     const form = useRef();
     const [sucsses, setSucsses] = useState(false);
 
@@ -22,23 +23,31 @@ const FormContact = () => {
         },
         validate: (values) => validate(values),
         onSubmit: (values) => {
-            sendEmail();
+            sendEmail(values);
         },
     });
 
-    function sendEmail(e) {
-        emailjs.sendForm('service_elap3uh', 'template_2gya86a', form.current, 'user_o9lBAZW5hXTb1BQ0r6faI').then(
-            (result) => {
-                setSucsses(true);
+    async function sendEmail(values) {
 
-                setTimeout(() => {
-                    setSucsses(false);
-                    formik.resetForm(e);
-                }, 3000);
+
+        try {
+            await axios.post('https://sheltered-stream-83127.herokuapp.com/sendMessage', {
+                messages: values.messages,
+                email: values.email,
+                name: values.name,
+                subject: values.subject
             })
+            setSucsses(true);
+        } catch (err) {
+            console.log(err)
+        }
+
+        setTimeout(() => {
+            setSucsses(false);
+            formik.resetForm();
+        }, 3000)
     }
 
-    console.log(formik)
     return (
         <>
             <div className={combineCss(styles.alert, sucsses && styles.active)}>
@@ -79,7 +88,6 @@ const FormContact = () => {
                                     {...formik.getFieldProps('email')}
                                     InputLabelProps={{className: combineCss(styles.test__label, formik.errors.email && styles.test__error)}}
                                     InputProps={{className: styles.test__input}}
-                                    onChange={formik.validateOnBlur}
                                 />
                                 <span className={formik.errors.email && styles.test__error}>*</span>
                             </div>

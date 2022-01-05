@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from "./styles.module.scss"
 import {randomNumber} from "../randomNumber";
 import {combineCss} from "../combineCss";

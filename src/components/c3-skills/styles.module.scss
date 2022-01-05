@@ -5,10 +5,6 @@
   @include standart_main_container;
 }
 
-.active {
-  @include active_wrapper;
-}
-
 .container {
   //border: .1px solid;
   padding-bottom: 100px;

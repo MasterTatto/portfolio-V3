@@ -6,7 +6,7 @@ import {combineCss} from "../../helpers/combineCss";
 import myself4 from '../../assets/img/mev4.png'
 
 
-const Header = ({setCurrentUrl, currentUrl, width, showMenu, setShowMenu, setBackMode, backMode}) => {
+const Header = ({setCurrentUrl, currentUrl, showMenu, setShowMenu, setBackMode, backMode}) => {
 
 
     return (
@@ -28,6 +28,7 @@ const Header = ({setCurrentUrl, currentUrl, width, showMenu, setShowMenu, setBac
                         return <NavLink
                             className={combineCss(el.link === currentUrl && styles.active, styles.li)}
                             to={el.link}
+                            key={el.title}
                             onClick={() => {
                                 setCurrentUrl(el.link)
                                 setShowMenu(false)

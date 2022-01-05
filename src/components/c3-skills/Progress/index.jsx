@@ -1,14 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React, {memo, useMemo, useState} from 'react';
 import {Progress} from 'antd';
 
-const ProgressBar = ({title, widthProgress, percent}) => {
+const ProgressBar = memo(({title, widthProgress, percent}) => {
     const [counter, setCounter] = useState(0);
 
-    useEffect(() => {
-        if (counter < percent) {
-            setTimeout(() => setCounter(() => counter + 1), 30);
-        }
-    }, [percent, counter]);
+    useMemo(() => {
+        if (counter >= percent) return
+        setTimeout(() => setCounter(() => counter + 1), 30);
+
+    }, [percent, counter])
 
     return (
         <>
@@ -25,6 +25,6 @@ const ProgressBar = ({title, widthProgress, percent}) => {
             <p style={{color: '#fff'}}>{title}</p>
         </>
     );
-};
+});
 
 export default ProgressBar;
