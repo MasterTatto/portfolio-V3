@@ -5,8 +5,23 @@
   @include standart_main_container
 }
 
-.container{
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
+.logo {
+  color: #08fdd8;
+  font-size: 42px;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  padding-top: 20px;
+  margin-left: 10%;
+  @include media-breakpoint-down(xs) {
+    padding-left: 15%;
+  }
+}
+

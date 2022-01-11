@@ -5,14 +5,15 @@ import Container from "../../helpers/container";
 import FullItems from "./fullitems";
 
 const Portfolio = ({data}) => {
-    return (
+    return (<>
+        <h1 className={styles.logo}>Skills</h1>
         <div className={combineCss(styles.portfolio)}>
+
             <Container className={styles.container}>
                 <FullItems data={data}/>
             </Container>
         </div>
-
-    )
+    </>)
 };
 
 export default Portfolio;

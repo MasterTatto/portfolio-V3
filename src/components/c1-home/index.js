@@ -2,11 +2,12 @@ import React, {useEffect, useState} from 'react';
 import styles from './styles.module.scss';
 import Container from '../../helpers/container';
 import profile from '../../assets/img/me.jpg';
+import resumePdf from '../../assets/ReactResume.pdf';
 import {init} from 'ityped';
 import {NavLink} from 'react-router-dom';
 import {combineCss} from '../../helpers/combineCss';
 
-const Home = () => {
+const Home = ({setCurrentUrl}) => {
     useEffect(() => {
         const myElement = document.querySelector('#runText');
         init(myElement, {
@@ -51,10 +52,12 @@ const Home = () => {
                             <span id={'runText'} className={styles.runText}/>
                         </p>
                         <div className={styles.linkBox}>
-                            <NavLink className={styles.linkInfo} to={'/portfolio'}>
+                            <NavLink className={styles.linkInfo} to={'/portfolio'}
+                                     onClick={setCurrentUrl.bind(null, '/portfolio')}>
                                 View portfolio
                             </NavLink>
-                            <a rel="noreferrer" className={styles.linkInfo} target={'_blank'} href={'/'}>
+                            <a rel="noreferrer" className={styles.linkInfo} href={resumePdf} target={'_blank'}
+                               download={'resume.pdf'}>
                                 Download resume
                             </a>
                         </div>

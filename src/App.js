@@ -16,7 +16,7 @@ import Item from "./components/c2-portfolio/item";
 function App() {
     const [currentUrl, setCurrentUrl] = useState('/');
     const [showMenu, setShowMenu] = useState(false);
-    const [backMode, setBackMode] = useState('particles')
+    const [backMode, setBackMode] = useState('bubbles')
     const {width} = useWindowSize()
 
     return (
@@ -31,7 +31,7 @@ function App() {
             )}
             <div className='pages'>
                 <Routes>
-                    <Route path={'/'} element={<Home/>}/>
+                    <Route path={'/'} element={<Home setCurrentUrl={setCurrentUrl}/>}/>
                     <Route path={'/portfolio'} element={<Portfolio data={items}/>}/>
                     <Route path={'/portfolio/:title'} element={<Item data={items}/>}/>
                     <Route path={'/skills'} element={<Skills/>}/>

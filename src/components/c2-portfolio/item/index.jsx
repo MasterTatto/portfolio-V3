@@ -28,9 +28,9 @@ const Item = ({data}) => {
                             </div>
 
                             <div className={styles.btn}>
-                                <a rel="noreferrer" href={'/'} className={styles.linkInfo} target={'_blank'}>View
+                                <a rel="noreferrer" href={el.code} className={styles.linkInfo} target={'_blank'}>View
                                     code</a>
-                                <a rel="noreferrer" href={'/'} className={styles.linkInfo} target={'_blank'}>View
+                                <a rel="noreferrer" href={el.demo} className={styles.linkInfo} target={'_blank'}>View
                                     demo</a>
                             </div>
 

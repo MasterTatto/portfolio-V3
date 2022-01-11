@@ -61,9 +61,13 @@
   flex: 1;
   height: 60%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
   border-left: 4px solid #08fdd8;
+
+  @media only screen and (max-width: 1600px) {
+    justify-content: space-between;
+  }
 }
 
 .text {
@@ -84,15 +88,26 @@
     display: flex;
     align-items: center;
     text-align: center;
-    font-size: 27px;
+    font-size: 1.6rem;
     font-weight: 300;
-
+    line-height: 1.8rem;
+    letter-spacing: .1rem;
   }
 
   span {
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 700;
     color: #08fdd8;
+    max-width: 600px;
+    text-align: center;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    line-height: 3rem;
+
+    //@media only screen and (max-width: 1600px) {
+    //  font-size: 1.7rem;
+    //  line-height: 2rem;
+    //}
   }
 
 }
