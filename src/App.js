@@ -15,7 +15,7 @@ import Item from "./components/c2-portfolio/item";
 
 function App() {
     const [currentUrl, setCurrentUrl] = useState('/');
-    const [showMenu, setShowMenu] = useState(false);
+    const [showMenu, setShowMenu] = useState(true);
     const [backMode, setBackMode] = useState('bubbles')
     const {width} = useWindowSize()
 
@@ -24,11 +24,11 @@ function App() {
             <Header currentUrl={currentUrl} setCurrentUrl={setCurrentUrl} width={width} showMenu={showMenu}
                     setShowMenu={setShowMenu} setBackMode={setBackMode} backMode={backMode}/>
 
-            {width <= 768 && (
-                <span className={combineCss('showMenu', showMenu && 'hidden')} onClick={() => setShowMenu(true)}>
-					menu
-				</span>
-            )}
+            {/*{width <= 768 && (*/}
+            {/*    <span className={combineCss('showMenu', showMenu && 'hidden')} onClick={() => setShowMenu(true)}>*/}
+			{/*		menu*/}
+			{/*	</span>*/}
+            {/*)}*/}
             <div className='pages'>
                 <Routes>
                     <Route path={'/'} element={<Home setCurrentUrl={setCurrentUrl}/>}/>

@@ -32,7 +32,7 @@ const Header = ({setCurrentUrl, currentUrl, showMenu, setShowMenu, setBackMode, 
                             onClick={() => {
                                 setCurrentUrl(el.link)
                                 setShowMenu(false)
-                            }}>{el.component}{el.title}</NavLink>
+                            }}>{el.component}<span className={styles.spanTitle}>{el.title}</span></NavLink>
                     })}
 
                 </ul>

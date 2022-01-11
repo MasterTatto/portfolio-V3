@@ -155,7 +155,8 @@
 }
 
 .linkInfo {
-  @include button // color: #08fdd8;
+  @include button ;
+  // color: #08fdd8;
   // font-size: 20px;
   // letter-spacing: 0.15rem;
   // font-weight: 300;
@@ -187,7 +188,13 @@
   // @include media-breakpoint-down(xs) {
   // 	padding: 7px 10px;
   // }
-;
+
+  @media only screen and (max-width: 575px) {
+    max-width: 170px;
+    height: 70px;
+    line-height: 27px;
+    margin-top: 50px;
+  }
 }
 
 //
