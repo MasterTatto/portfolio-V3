@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-v3/static/css/main.ab29f174.chunk.css",
+    "main.css": "/portfolio-v3/static/css/main.04f3df24.chunk.css",
     "main.js": "/portfolio-v3/static/js/main.d323e80d.chunk.js",
     "main.js.map": "/portfolio-v3/static/js/main.d323e80d.chunk.js.map",
     "runtime-main.js": "/portfolio-v3/static/js/runtime-main.b3d59d12.js",
@@ -10,7 +10,7 @@
     "static/js/3.ee6c6842.chunk.js": "/portfolio-v3/static/js/3.ee6c6842.chunk.js",
     "static/js/3.ee6c6842.chunk.js.map": "/portfolio-v3/static/js/3.ee6c6842.chunk.js.map",
     "index.html": "/portfolio-v3/index.html",
-    "static/css/main.ab29f174.chunk.css.map": "/portfolio-v3/static/css/main.ab29f174.chunk.css.map",
+    "static/css/main.04f3df24.chunk.css.map": "/portfolio-v3/static/css/main.04f3df24.chunk.css.map",
     "static/js/2.2dfb91ef.chunk.js.LICENSE.txt": "/portfolio-v3/static/js/2.2dfb91ef.chunk.js.LICENSE.txt",
     "static/media/ReactResume.e2e20b5b.pdf": "/portfolio-v3/static/media/ReactResume.e2e20b5b.pdf",
     "static/media/cards.032dc9c1.png": "/portfolio-v3/static/media/cards.032dc9c1.png",
@@ -30,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.b3d59d12.js",
     "static/js/2.2dfb91ef.chunk.js",
-    "static/css/main.ab29f174.chunk.css",
+    "static/css/main.04f3df24.chunk.css",
     "static/js/main.d323e80d.chunk.js"
   ]
 }
