@@ -5,12 +5,10 @@ import {TextField} from "@mui/material";
 import {combineCss} from "../../../helpers/combineCss";
 import {useFormik} from "formik";
 import {validate} from "../../../helpers/validate";
-// import emailjs, {init} from "emailjs-com";
 import {ReactComponent as Sucsses} from "../../../assets/icons/sucses.svg";
 import axios from "axios";
 
 const FormContact = () => {
-    // init('user_o9lBAZW5hXTb1BQ0r6faI');
     const form = useRef();
     const [sucsses, setSucsses] = useState(false);
 
@@ -22,8 +20,8 @@ const FormContact = () => {
             messages: '',
         },
         validate: (values) => validate(values),
-        onSubmit: (values) => {
-            sendEmail(values);
+        onSubmit: async (values) => {
+            await sendEmail(values);
         },
     });
 

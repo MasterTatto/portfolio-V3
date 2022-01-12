@@ -4,16 +4,29 @@
 .wrapper {
   display: flex;
   height: 100%;
+
+  @media only screen and (max-width: 575px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 95%;
+    margin: 0 auto;
+  }
 }
 
 .imgBox {
   flex: 0.4;
-  // border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 4;
+
+  @media only screen and (max-width: 575px) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+  }
 }
 
 .img {
@@ -24,6 +37,11 @@
   @media only screen and (min-width: 1440px) and (max-width: 1600px) {
     height: 450px;
     width: 450px;
+  }
+
+  @media only screen and (max-width: 575px) {
+    height: 250px;
+    flex: .7;
   }
 }
 
@@ -42,10 +60,18 @@
 .topInputs {
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 575px) {
+    flex-direction: column;
+    width: 100%;
+    height: 125px;
+    justify-content: space-between;
+  }
 }
 
 .topInputs .input {
   width: inherit;
+
 }
 
 .impotant {
@@ -55,6 +81,10 @@
 
   @media only screen and (min-width: 1440px) and (max-width: 1600px) {
     max-width: 270px;
+  }
+
+  @media only screen and (max-width: 575px) {
+    max-width: 600px;
   }
 }
 
@@ -76,17 +106,25 @@
   max-width: 650px;
   width: 100%;
   height: 100%;
+
+  @media only screen and (max-width: 575px) {
+    height: 450px;
+    flex: 1;
+  }
 }
 
 .logo {
   color: #08fdd8;
   font-size: 42px;
   letter-spacing: 1px;
-  //margin-bottom: 1.5rem;
   font-weight: 900;
   margin-top: 150px;
   margin-bottom: 50px;
   margin-left: 20px;
+
+  @media only screen and (max-width: 575px) {
+    margin-top: 50px;
+  }
 }
 
 .btn {
@@ -145,5 +183,6 @@
   height: 27px;
   width: 27px;
 }
+
 
 

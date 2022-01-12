@@ -9,7 +9,7 @@ const Contact = () => {
 
     return (
         <div className={combineCss(styles.contact)}>
-            <Container>
+            <Container className={styles.container}>
                 <FormContact/>
                 <MapContact/>
             </Container>

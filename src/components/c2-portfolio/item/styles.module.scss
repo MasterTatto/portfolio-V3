@@ -2,7 +2,7 @@
 @import 'src/styles/mixin';
 
 .box {
-  height: 100vh;
+  height: 125vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -22,6 +22,10 @@
   height: 100%;
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: 575px) {
+    flex-direction: column;
+  }
 }
 
 .left {
@@ -32,6 +36,10 @@
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
+
+  @media only screen and (max-width: 575px) {
+    width: 100%;
+  }
 }
 
 .imgBox {
@@ -44,6 +52,12 @@
 
   &:hover {
     transform: rotate(0deg);
+  }
+
+  @media only screen and (max-width: 575px) {
+    transform: rotate(0deg);
+    max-height: 70%;
+    width: 95%;
   }
 }
 
@@ -67,6 +81,11 @@
 
   @media only screen and (max-width: 1600px) {
     justify-content: space-between;
+  }
+
+  @media only screen and (max-width: 575px) {
+    border-top: 4px solid #08fdd8;
+    border-left: 0;
   }
 }
 
@@ -103,11 +122,6 @@
     letter-spacing: .1rem;
     margin-top: 20px;
     line-height: 3rem;
-
-    //@media only screen and (max-width: 1600px) {
-    //  font-size: 1.7rem;
-    //  line-height: 2rem;
-    //}
   }
 
 }
@@ -118,5 +132,9 @@
 
   .linkInfo {
     @include button
+  }
+
+  @media only screen and (max-width: 575px) {
+    padding-bottom: 100px;
   }
 }

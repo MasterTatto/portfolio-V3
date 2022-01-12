@@ -3,16 +3,26 @@
 
 .skills {
   @include standart_main_container;
+
+  @media only screen and (max-width: 575px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .container {
-  //border: .1px solid;
   padding-bottom: 100px;
-  //margin-bottom: 100px;
+
   @include media-breakpoint-down(xs) {
     min-width: 90vw;
     margin-left: 5%;
+  }
 
+  @media only screen and (max-width: 575px) {
+    width: 100vw;
+    margin: 0;
+    padding: 0 0 100px 0;
   }
 }
 
@@ -27,10 +37,13 @@
   @include media-breakpoint-down(xs) {
     padding-left: 15%;
   }
+
+  @media only screen and (max-width: 575px) {
+    padding-left: 5%;
+  }
 }
 
 .box {
-  //border: .1px solid;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -45,20 +58,14 @@
     display: flex;
     max-width: 100%;
   }
+
+  @media only screen and (max-width: 575px) {
+    align-items: center;
+    display: flex;
+  }
 }
 
-//.line {
-//  position: absolute;
-//  height: 97%;
-//  background-color: #cacaca;
-//  width: 1px;
-//  left: 50%;
-//}
-
-
 .item {
-  //border: .1px solid;
-  //max-width: 500px;
   max-width: 40%;
   width: 100%;
   display: flex;
@@ -77,6 +84,7 @@
   @media only screen and (min-width: 1440px) and (max-width: 1800px) {
     padding-top: 20px;
   }
+
   @include media-breakpoint-down(xl) {
     max-width: 45%;
     padding: 20px 10px;
@@ -85,6 +93,11 @@
     max-width: 85%;
     margin-left: 15%;
     padding: 20px 0;
+  }
+  @media only screen and (max-width: 575px) {
+    align-items: center;
+    margin: 0 auto;
+    max-width: 90%;
   }
 }
 

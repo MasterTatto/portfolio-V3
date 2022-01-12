@@ -6,7 +6,7 @@ const TimeLine = () => {
 
     return (
         <>
-            <h1 className={styles.logo}>Expereans</h1>
+            <h1 className={styles.logo}>Experience</h1>
             <div className={styles.box_item}>
                 {timeLine.map((el) => {
                     return <div className={styles.item} key={el.data}>

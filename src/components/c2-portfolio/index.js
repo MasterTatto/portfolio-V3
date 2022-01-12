@@ -6,7 +6,7 @@ import FullItems from "./fullitems";
 
 const Portfolio = ({data}) => {
     return (<>
-        <h1 className={styles.logo}>Skills</h1>
+        <h1 className={styles.logo}>Portfolio</h1>
         <div className={combineCss(styles.portfolio)}>
 
             <Container className={styles.container}>

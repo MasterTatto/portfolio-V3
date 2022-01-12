@@ -16,6 +16,10 @@
     position: absolute;
     right: 49.8%;
     top: 5%;
+
+    @media only screen and (max-width: 575px) {
+      top: 0;
+    }
   }
 }
 
@@ -34,9 +38,16 @@
 
   &:nth-child(even) {
     flex-direction: row-reverse;
+
+    @media only screen and (max-width: 575px) {
+      flex-direction: column;
+    }
   }
 
-  //border: .1px solid;
+  @media only screen and (max-width: 575px) {
+    flex-direction: column;
+    margin: 100px auto 0 auto;
+  }
 }
 
 .item span {
@@ -71,6 +82,10 @@
     position: absolute;
     z-index: -10;
   }
+
+  @media only screen and (max-width: 575px) {
+    display: none;
+  }
 }
 
 .data {
@@ -82,6 +97,10 @@
   border: 3px solid #08fdd8;
   padding: 15px;
   background-color: #181818;
+
+  @media only screen and (max-width: 575px) {
+    margin-bottom: 30px;
+  }
 }
 
 .description {
@@ -99,6 +118,10 @@
   &:nth-child(even) {
     text-align: right;
   }
+
+  @media only screen and (max-width: 575px) {
+    max-width: 95%;
+  }
 }
 
 .logo {
@@ -112,6 +135,10 @@
 
   @include media-breakpoint-down(xs) {
     padding-left: 15%;
+  }
+
+  @media only screen and (max-width: 575px) {
+    padding-left: 5%;
   }
 }
 
